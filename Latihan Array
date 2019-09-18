@@ -1,7 +1,7 @@
 M. Rafi Cahya Ramadhana
 X RPL 1 / Absen 30
 
-// ini latihan array satu dimensi no 1
+No. 1
 int nilai [] = new int [3];
         nilai [0] = 70;
         nilai [1] = 80;
@@ -16,7 +16,10 @@ int nilai [] = new int [3];
 
         System.out.println("Nilai rata-rata = "+ ratarata);
         
-// ini latihan array satu dimensi no 2
+        Outputnya : 
+        Nilai rata-rata = 71.66666666666667
+        
+
 int [] jumlahhari;
         jumlahhari = new int [7];
         jumlahhari [0] = 31;
@@ -29,7 +32,10 @@ int [] jumlahhari;
 
         System.out.println("Bulan  Januari memiliki "+ jumlahhari [2]+" hari");
         
-// ini latihan array multidimensi 1
+        Outputnya :
+        Bulan  Januari memiliki 31 hari
+        
+No. 2
 int nilai[][] = new int[2][3];
 
         nilai[0][0] = 85;
@@ -61,3 +67,136 @@ int nilai[][] = new int[2][3];
             }
             System.out.print(ratarataMP[i] + "\n");
         }
+        
+        Outputnya :
+        Nilai Mata Pelajaran
+
+MK	Minggu1	        Minggu2	        Minggu3	        Rata-Rata
+RPL	85		81		78		81.33333333333333
+PBO	65		73		71		69.66666666666667
+
+
+No. 3
+        public class testarraydua
+ public static void main (String args []){
+ int nis [][] = {{210651},{210651},{210652}};
+ String nama [][] = {{"Ade"},{"Galih "},{"Baihaqi"}};
+ public void tampil(String n){
+ System.out.println(“Identitas Siswa Angkatan 24”);
+        }
+ public void namanis (int n){
+ for (int i = 0; i< 1; i++){
+ for (int j = 0; j < 1; j++){
+ System.out.println(nama[1][j]+”:”+nis[1][j]);
+ }
+ }
+ }
+ public static void main (String[]args){
+ testarraydua siswa = new testarraydua();
+ siswa.tampil(null);
+ siswa.namanis(0);
+ }
+ }
+ 
+ Outputnya adalah : 
+ Identitas Siswa
+Galih:210652
+
+=====PEMBENARAN=====
+
+ int nis[][] = {{210651},{210652},{210653}};
+        String nama[][] = {{"Ade"},{"Galih"},{"Baihaqi"}};
+
+        public void tampil() {
+            System.out.println("Identitas Siswa");
+        }
+
+        public void namanis (){
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 1; j++) {
+                System.out.println(nama[i][j] +":"+nis[i][j]);
+                }
+            }
+        }
+
+    public static void main(String[] args) {
+        LatihanArrayMultiDimensi2 siswa = new LatihanArrayMultiDimensi2();
+        siswa.tampil();
+        siswa.namanis();
+    }
+}
+
+        Outputnya :
+        
+        Identitas Siswa
+        Ade:210651
+        Galih:210652
+        Baihaqi:210653
+        
+        
+No. 4
+int[][][] nilai = {
+                {{51, 89}, {60, 59}, {52, 47}},
+                {{39, 58}, {71, 85}, {39, 78}},
+                {{81, 32}, {51, 86}, {59, 31}}};
+
+        for (int i = 0; i < nilai.length; i++) {
+            for (int j = 0; j < nilai[0].length; j++) {
+                for (int k = 0; k < nilai[0][0].length; k++) {
+                    System.out.print("nilai[" +i+ "][" +j+ "][" +k+ "] = "+ nilai[i][j][k] + "\t");
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+        
+Outputnya :
+nilai[0][0][0] = 51	nilai[0][0][1] = 89	
+nilai[0][1][0] = 60	nilai[0][1][1] = 59	
+nilai[0][2][0] = 52	nilai[0][2][1] = 47	
+
+nilai[1][0][0] = 39	nilai[1][0][1] = 58	
+nilai[1][1][0] = 71	nilai[1][1][1] = 85	
+nilai[1][2][0] = 39	nilai[1][2][1] = 78	
+
+nilai[2][0][0] = 81	nilai[2][0][1] = 32	
+nilai[2][1][0] = 51	nilai[2][1][1] = 86	
+nilai[2][2][0] = 59	nilai[2][2][1] = 31	
+
+Penjelasan : Program tersebut menampilkan setiap index dari array 3 dimensi
+
+=====PRAKTIKUM=====
+
+No. 1
+int bilangan[5] = {1,2,3,4,5}
+( array tidak diinisialisasi dengan benar )
+System.out.println(bilangan[6]);
+( tidak bisa karena indeks hanya sampai 4 dan tidak sampai 6 )
+    
+===PEMBENARAN===
+
+( menampilkan setiap indeks dari array bilangan )
+   int[] bilangan = {1,2,3,4,5};
+
+        for (int i = 0; i < bilangan.length; i++) {
+            System.out.print(bilangan[i]);
+            System.out.print(" ");
+        }
+    }
+    
+    Outputnya : 1 2 3 4 5 
+    
+No. 2
+   int bilangan[5] = {1,2,3,4,5,6,7,8};
+   ( inisialisasi tidak benar )
+   ( tidak ada perintah untuk menulis ke layar )
+   
+===PEMBENARAN===
+( agar bisa berjalan menampilkan isi array )
+   int[] bilangan = {1,2,3,4,5,6,7,8};
+           for (int i = 0; i < bilangan.length; i++) {
+               System.out.print(bilangan[i]);
+               System.out.print(" ");
+        }
+        Outputnya : 1 2 3 4 5 6 7 8 
+        
